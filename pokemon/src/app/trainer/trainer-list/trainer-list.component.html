@@ -1,33 +1,23 @@
 <div>
   <div>
-    <div *ngIf="selected">
-      <app-trainer-detail
-        [trainerDetail]="selectedTrainer"
-      ></app-trainer-detail>
-    </div>
     <table>
       <thead>
         <tr>
-          <th class="h4">Trainers's Name</th>
+          <th class="h4">Trainer's Name</th>
           <th class="h4">Trainer's Image</th>
-          <th class="h4">Trainer's Samll snapshot</th>
+          <th class="h4">Trainer's Small snapshot</th>
         </tr>
       </thead>
       <tbody>
-        <tr
-          *ngFor="let t of trainers"
-          class="row-table"
-          (click)="onSelected(t)"
-        >
+        <tr *ngFor="let t of trainers" class="row-table">
           <td>
-            <dd>{{ t.name }}</dd>
+            <!-- Enlace con routerLink para navegar a la página de detalles -->
+            <a routerLink="['/trainer', t.id]">
+              <dd>{{ t.name }}</dd>
+            </a>
           </td>
           <td>
-            <img
-              [src]="t.imageUrl"
-              alt="Trainer's Image"
-              class="img-thumbnail"
-            />
+            <img [src]="t.imageUrl" alt="Trainer's Image" class="img-thumbnail" />
           </td>
           <td>
             <dd>{{ t.smallSnopsies }}</dd>
@@ -37,3 +27,4 @@
     </table>
   </div>
 </div>
+

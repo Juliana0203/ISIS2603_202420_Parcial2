@@ -13,3 +13,4 @@ import { TrainerModule } from './trainer/trainer.module';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+

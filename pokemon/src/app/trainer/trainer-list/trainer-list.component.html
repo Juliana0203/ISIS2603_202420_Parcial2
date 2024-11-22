@@ -11,7 +11,6 @@
       <tbody>
         <tr *ngFor="let t of trainers" class="row-table">
           <td>
-            <!-- Enlace con routerLink para navegar a la página de detalles -->
             <a routerLink="['/trainer', t.id]">
               <dd>{{ t.name }}</dd>
             </a>
@@ -26,5 +25,9 @@
       </tbody>
     </table>
   </div>
+</div>
+
+<div class="average">
+  <strong>No pokemons: </strong>{{ averagePokemons| number: '1.0-0' }}
 </div>
 

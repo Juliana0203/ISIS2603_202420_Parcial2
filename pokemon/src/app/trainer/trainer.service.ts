@@ -8,7 +8,7 @@ import { TrainerDetail } from './trainer-detail';
   providedIn: 'root'
 })
 export class TrainerService {
-  private apiUrl: string = environment.baseUrl + 'comentarios';
+  private apiUrl: string = environment.baseUrl + 'trainers';
 
 constructor(private http: HttpClient) { }
 
